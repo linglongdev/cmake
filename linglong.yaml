@@ -1,0 +1,23 @@
+package:
+  id: cmake
+  name: cmake
+  version: 3.25.1-1
+  kind: lib
+  description: |
+    cmake.
+
+base:
+  id: org.deepin.base
+  version: 23.0.0
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/cmake.git
+  commit: 3.25.1-1
+
+variables:
+  extra_args: |
+    -DBUILD_TESTING=OFF
+
+build:
+  kind: cmake
